@@ -21,9 +21,8 @@ class KeyboardAccessoryToolbar: UIToolbar {
         super.init(frame: frame)
         addBarItems()
     }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     // MARK: - Custom bar items
