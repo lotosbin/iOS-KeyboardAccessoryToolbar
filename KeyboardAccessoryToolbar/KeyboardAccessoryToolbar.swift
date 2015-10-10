@@ -23,7 +23,7 @@ class KeyboardAccessoryToolbar: UIToolbar {
     }
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
     }
     
     // MARK: - Custom bar items
@@ -45,7 +45,7 @@ class KeyboardAccessoryToolbar: UIToolbar {
         }
 
         if shouldReturn {
-            println("shouldReturn")
+            print("shouldReturn")
             // If delegate allow currentView to end editing, then resign as first responder
             currentView?.resignFirstResponder()
         }
@@ -55,10 +55,10 @@ class KeyboardAccessoryToolbar: UIToolbar {
     weak var currentView: UIView? {
         didSet {
             if let textField = currentView as? UITextField {
-                println("isTextField")
+                print("isTextField")
                 textField.inputAccessoryView = self
             } else if let textView = currentView as? UITextView {
-                println("isTextView")
+                print("isTextView")
                 textView.inputAccessoryView = self
             }
         }
