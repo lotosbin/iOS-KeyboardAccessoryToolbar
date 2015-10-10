@@ -37,7 +37,7 @@ extension ViewController: UITextFieldDelegate {
             }
             
             // Set toolbar's current text field to active text field
-            accessoryToolbar.currentTextField = textField
+            accessoryToolbar.currentView = textField
         }
         
         return true
